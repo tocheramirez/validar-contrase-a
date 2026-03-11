@@ -53,6 +53,30 @@ func leer() (bool, bool, bool, bool) {
 func lectura() {
 	tieneMayus, tieneMinus, tieneNumero, tieneSigno := leer()
 
+	if tieneMayus == true {
+		fmt.Println("Tiene mayúsculas")
+	} else {
+		fmt.Println("No tiene mayúsculas")
+	}
+
+	if tieneMinus == true {
+		fmt.Println("Tiene minúsculas")
+	} else {
+		fmt.Println("No tiene minúsculas")
+	}
+
+	if tieneNumero == true {
+		fmt.Println("Tiene números")
+	} else {
+		fmt.Println("No tiene números")
+	}
+
+	if tieneSigno {
+		fmt.Println("Tiene signos")
+	} else {
+		fmt.Println("No tiene signos")
+	}
+	
 	puntos := 0
 
 	if tieneMayus {
