@@ -5,18 +5,12 @@ import (
 	"unicode"
 )
 
-func validar() (bool, bool, bool, bool) {
+func leer() (bool, bool, bool, bool) {
+
 	tieneMayus := false
 	tieneMinus := false
 	tieneNumero := false
 	tieneSigno := false
-
-	return tieneMayus, tieneMinus, tieneNumero, tieneSigno
-}
-
-func leer() {
-
-	tieneMayus, tieneMinus, tieneNumero, tieneSigno := validar()
 
 	var contraseña string
 	fmt.Print("Ingresa la contraseña: ")
@@ -53,34 +47,11 @@ func leer() {
 		}
 
 	}
-
-	if tieneMayus == true {
-		fmt.Println("Tiene mayúsculas")
-	} else {
-		fmt.Println("No tiene mayúsculas")
-	}
-
-	if tieneMinus == true {
-		fmt.Println("Tiene minúsculas")
-	} else {
-		fmt.Println("No tiene minúsculas")
-	}
-
-	if tieneNumero == true {
-		fmt.Println("Tiene números")
-	} else {
-		fmt.Println("No tiene números")
-	}
-
-	if tieneSigno {
-		fmt.Println("Tiene signos")
-	} else {
-		fmt.Println("No tiene signos")
-	}
+	return tieneMayus, tieneMinus, tieneNumero, tieneSigno
 }
 
 func lectura() {
-	tieneMayus, tieneMinus, tieneNumero, tieneSigno := validar()
+	tieneMayus, tieneMinus, tieneNumero, tieneSigno := leer()
 
 	puntos := 0
 
@@ -121,7 +92,6 @@ func lectura() {
 }
 
 func main() {
-	leer()
 	lectura()
 
 }
